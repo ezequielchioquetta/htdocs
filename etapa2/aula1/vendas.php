@@ -1,0 +1,34 @@
+<?php
+define("Turma","Turma de programação php");
+//Variavel 
+$valor=100;
+$salario=1200.25;
+$nome="Chioquetta Ezequiel";
+$cond=TRUE;
+?>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<Meta name=viewport" content="width=device-width,initial-sacale=1.0">
+ 
+<title> Vendas </title> 
+
+<body>
+
+<?php
+ //recebe os dados da outra página
+$nome=$_GET["nome"];
+$prod=$_GET["produto"];
+$quant=$_GET["quant"];
+$preço=$_GET["preço"];
+
+echo "o cliente".$nome."comprou".$quant."".$prod;
+echo "e vai pagar".($preço*$quant);
+?>
+
+
+</body>
+</html>
+
+ 

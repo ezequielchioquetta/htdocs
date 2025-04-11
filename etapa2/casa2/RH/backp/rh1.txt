@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form name="Form1"  action="salarioliquido.php" method="POST">
+    <p>
+    <label for="qtdhoras"> Quantidade de horas trabalhadas </label>
+    <input type="text" name="qtdhoras" id="qtdhoras"/>
+    </p>
+    <p>
+    <label for="vhoras"> Valor da hora trabalhada </label>
+    <input type="text" name="vhoras" id="vhoras"/>
+    </p> 
+    <p>
+    <label for="desconto">desconto</label>
+    <select name="desconto" id="desconto">
+        <option value="10">10%</option>
+        <option value="20">10%</option>
+        <option value="30">30%</option>
+    </select>
+    </p>   
+    <p>
+        <input type="submit" name="Enviar" value="Enviar"/>
+    </p>
+  </form>
+
+</body>
+</html>
+--------------------
+<body>
+    <?php 
+        
+            $qhoras=0;
+            $vhoras=0;
+            $desconto=0;
+            $pdesconto=0;
+            $sbruto=0;
+            $sliquido=0;
+                if (isset($_POST["Enviar"])) {
+                    $qhoras = $_POST["qtdhoras"];
+                    $vhoras = $_POST["vhoras"];
+                    $pdesconto = $_POST["desconto"];
+                    $sbruto= $qhoras*$vhoras;
+                                        //sb = 100
+                                        // d = pdesconto
+                    $desconto = ($sbruto * $pdesconto) /100;  
+                    $sliquido = $sbruto - $desconto;
+                }
+                
+                
+?>        
+        <h2>Quantidade de horas trabalhadas:<?php echo $qhoras; ?></h2>
+        <h2>Valor das horas trabalhadas:<?php echo $vhoras;?> </h2>
+        <h2>Percentual de desconto:<?php echo $pdesconto;?> </h2>
+        <h2>Salário Bruto:<?php echo $sbruto;?> </h2>
+        <h2>Desconto:<?php echo $desconto;?> </h2>
+        <h2>Salário liquido:<?php echo $sliquido;?> </h2>  
+  
+        <a href="index.php"> informe os dados na página anterios</a>
+</body>
+</html>

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+/* font-family: 'Passion One', cursive;
+font-family: 'Sriracha', cursive;*/
+:root{
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+--fonte1: verdana,geneva,tahoma,sans-serif;
+--fonte2:'Passion One', cursive;
+--fonte3:'Sriracha', cursive;
+--fonte-padrao: Arial, Helvetica, sans-serif;
+--fonte-destaque: 'Bebas Neue', cursive;
+--fonte-android:'Android',cursive;
+}
+*{
+ 
+    margin: 0%;
+    padding: 0px 0px 0px 0px;
+    }
+
+body{
+
+    background-color: #15142b;
+}
+
+h1{
+    display: inline;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6em;
+    background-position:center;
+
+   
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    text-align:justify;
+    
+}
+header >a{
+        color:white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration:none;
+        transition-duration: 0.5s;
+    }
+    nav{
+        background-color:var(--cor5);
+        padding: 10px;
+        box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.473);/*efeito 3d */
+        
+    }
+    nav >a{
+        color:white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration:none;
+        transition-duration: 0.5s;
+    }
+    nav >a:hover{
+        background-color: var(--cor2);
+        color:var(--cor5)
+    }
+    
+    
+
+    footer{
+        background-color:var(--cor5);
+        padding: 10px;
+        box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.473);/*efeito 3d */
+        
+    }
+    footer >a{
+        color:white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration:none;
+        transition-duration: 0.5s;
+    }
+    footer >a:hover{
+        background-color: var(--cor2);
+        color:var(--cor5);
+    
+    }
+    section#img01{
+    
+    background: url("../imagens/just8.jpeg");
+    background-position: left center;
+    background-size: cover;
+    background-attachment: fixed;
+    color:white;
+
+    
+    }
+    /* stylo de formulário
+    */
+   
+
+/* ELEMENTOS DE FORMULÁRIO */
+
+form {
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form label {
+    display: inline;
+    width: fit-content;
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #eb9903;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #c27013;
+}
+
+input[type=button], button {
+    width: 100%;
+    background-color: #372991;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, button:hover {
+    background-color: #291f6c;
+}
+
+fieldset {
+    border: 0.5px dotted #372991;
+}
+
+fieldset > legend {
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+    background-color: #291f6c;
+    display: block;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    padding: 5px;
+}
+
+a {
+   
+    display: inline;
+    width: 100vw;
+    color: white;
+    background-color: #291f6c;
+    text-align: center;
+    margin-top: auto;
+    padding: 5px;
+}
+a:hover{
+    color:#ea912a
+
+}

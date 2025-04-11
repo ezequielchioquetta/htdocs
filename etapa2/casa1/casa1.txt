@@ -1,0 +1,9 @@
+
+aula dia 31 de marco de 2023
+
+http://localhost/etapa2/casa1/exercicio1/exercico1.php
+http://localhost/etapa2/casa1/exercico2/colegio.php
+http://localhost/etapa2/casa1/exercicio3/conversor.php
+http://localhost/etapa2/casa1/exercicio4/saude.php
+
+https://tectiezequiel.github.io/etapa2/casa1/home/index.html ----online

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processos</title>
+    <link rel="stylesheet" href="../advogados/estilo/stylo.css">
+    <link rel="shortcut icon" href="../advogados/imagens/rio-grande-do-sul-logo.ico" type="image/x-icon">
+</head>
+<body>
+
+<section class="imagem" id="img02">
+<head>
+    <h2>Processo</h2>
+    <form method="GET">
+        Nome do Dr. Bachael em Direito
+        <select name="nome_advogado">
+            <?php
+            // Conectar ao banco de dados
+            $conexao = new mysqli("localhost", "root", "", "escritorio");
+
+            // Verificar a conexão
+            if ($conexao->connect_error) {
+                die("Erro na conexão: " . $conexao->connect_error);
+            }
+
+            // Consultar todos os advogados
+            $result_advogados = $conexao->query("SELECT id_adv, nome FROM advogados");
+
+            // Exibir os advogados no dropdown
+            while ($row_advogados = $result_advogados->fetch_assoc()) {
+                echo "<option value='{$row_advogados['nome']}'>{$row_advogados['nome']}</option>";
+            }
+
+            // Fechar a conexão
+            $conexao->close();
+            ?>
+        </select>
+        <br>
+        Numero do Advogado
+        <select name="id_adv">
+            <?php
+            // Conectar ao banco de dados
+            $conexao = new mysqli("localhost", "root", "", "escritorio");
+
+            // Verificar a conexão
+            if ($conexao->connect_error) {
+                die("Erro na conexão: " . $conexao->connect_error);
+            }
+
+            // Consultar todos os advogados
+            $result_advogados = $conexao->query("SELECT id_adv, nome FROM advogados");
+
+            // Exibir os advogados no dropdown
+            while ($row_advogados = $result_advogados->fetch_assoc()) {
+                echo "<option value='{$row_advogados['id_adv']}'>{$row_advogados['id_adv']}</option>";
+            }
+
+            // Fechar a conexão
+            $conexao->close();
+            ?>
+        </select>
+        <br>
+        Movimentação do processo
+        <select name="cituacao">
+            <?php
+            // Conectar ao banco de dados
+            $conexao = new mysqli("localhost", "root", "", "escritorio");
+
+            // Verificar a conexão
+            if ($conexao->connect_error) {
+                die("Erro na conexão: " . $conexao->connect_error);
+            }
+
+            // Consultar todas as situações
+            $result = $conexao->query("SELECT DISTINCT cituacao FROM processo");
+
+            // Exibir as situações no dropdown
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='{$row['cituacao']}'>{$row['cituacao']}</option>";
+            }
+
+            // Fechar a conexão
+            $conexao->close();
+            ?>
+        </select>
+        <br>
+        Data do inicio do processo:
+        <input type="date" name="data_ini">
+        <br>
+        <input type="submit" name="processo">
+    </form>
+</head>
+<?php
+
+if (isset($_GET["processo"])) {
+    // Recebe os dados do formulário
+    $id_adv_nome = $_GET["nome_advogado"] ?? '';
+    $cituacao = $_GET["cituacao"];
+    $data_ini = $_GET["data_ini"];
+
+    // Verifica se $id_adv_nome não está vazio
+    if (empty($id_adv_nome)) {
+        die("Erro: Nome do advogado não fornecido.");
+    }
+
+    // Conecta ao banco de dados
+    $conexao = new mysqli("localhost", "root", "", "escritorio");
+
+    // Verifica se a conexão foi bem-sucedida
+    if ($conexao->connect_error) {
+        die("Erro na conexão: " . $conexao->connect_error);
+    }
+
+    // Prepara a consulta SQL para buscar o id_adv com base no nome_advogado
+    $sql_busca_id = "SELECT id_adv FROM advogados WHERE nome = ?";
+    
+    // Prepara a declaração
+    $stmt_busca_id = $conexao->prepare($sql_busca_id);
+
+    // Verifica se a preparação da declaração foi bem-sucedida
+    if ($stmt_busca_id === false) {
+        die("Erro na preparação da declaração: " . $conexao->error);
+    }
+
+    // Liga os parâmetros à declaração
+    $stmt_busca_id->bind_param("s", $id_adv_nome);
+
+    // Executa a declaração
+    $stmt_busca_id->execute();
+
+    // Liga a variável $id_adv para armazenar o resultado
+    $stmt_busca_id->bind_result($id_adv);
+
+    // Busca o resultado
+    $stmt_busca_id->fetch();
+
+    // Fecha a declaração
+    $stmt_busca_id->close();
+
+    // Verifica se $id_adv é nulo
+    if ($id_adv === null) {
+        die("Erro: Advogado não encontrado.");
+    }
+
+    // Prepara a consulta SQL para inserir no processo
+    $sql = "INSERT INTO processo (id_adv, cituacao, data_ini) VALUES (?, ?, ?)";
+    
+    // Prepara a declaração
+    $stmt = $conexao->prepare($sql);
+
+    // Verifica se a preparação da declaração foi bem-sucedida
+    if ($stmt === false) {
+        die("Erro na preparação da declaração: " . $conexao->error);
+    }
+
+    // Liga os parâmetros à declaração
+    $stmt->bind_param("sss", $id_adv, $cituacao, $data_ini);
+
+    // Executa a declaração
+    if ($stmt->execute()) {
+        echo "Dados gravados com sucesso!";
+    } else {
+        echo "Erro ao gravar os dados: " . $stmt->error;
+    }
+
+    // Fecha a declaração e a conexão
+    $stmt->close();
+    $conexao->close();
+}
+?>
+</section>
+</body>
+</html>

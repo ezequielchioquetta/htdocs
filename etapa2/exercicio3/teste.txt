@@ -1,0 +1,166 @@
+http://localhost/etapa2/calculadora/teste.php
+http://localhost/etapa2/exercicio3/index.php
+
+guanabara 
+http://localhost/cursophp/exercicio002/index.php
+
+tectiezequiel.github.io)
+
+----- teste2.php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta</title>
+</head>
+<body>
+<div style="position:relativa;margin:5px; top:50px;left: 200px;">
+    Calculo da Folha mensal
+</div>  
+        <?php
+        //Recebe  os dados da página inicial
+        $nome= $_POST ["nome"];
+        $salario= $_POST ["salario"];
+        $percentual= $_POST ["percentual"];
+        
+       $descontos=$salario*$percentual/100;
+       $a_receber=$salario-$descontos;
+       ?>
+<div>
+O funcionario:<?php echo $nome;?>
+</div>
+<div>
+O Salario total:<?php echo $salario;?>
+</div>
+<div>
+Valor dos Descontos:<?php echo $descontos;?>
+</div>
+<div>
+Líquido a Receber:<?php echo $a_receber;?>
+</div>
+</body>
+</html>
+
+-----teste.php
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>utilizar comandondo php</title>
+</head>
+<body>
+<form name="teste" action="teste2.php" method="post">
+<div style="position:relativa;margin:5px; top:50px;left: 200px;">
+    Utilizando comando php
+</div>
+<div style="position:relativa;margin:5px; top:50px;left: 200px;">
+    <label>Nome do funcionario</label>
+    <input type="text" id="nome" name="nome">
+</div>
+<div style="position:relativa;margin: 5px; top: 70px;left: 200px;">   
+<label>Salário base </label>
+<input type="text" id="salario" name="salario">
+</div>
+<div style="position:relativa;margin: 5px;top: 90px;left: 200px;">   
+<label>Percentual de desconto </label>
+<input type="text" id="percentual" name="percentual">
+</div>
+<div style="position:relativa;margin: 5px;top: 150px;left: 400px;">   
+<label>Percentual de desconto </label>
+<input type="submit" id="calcular" name="calcular">
+</div>
+</form>
+</body>
+</html>
+
+
+aula 17/03
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora </title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+    
+            <form name="calcular" action="resultado.php" method="get">;
+          <div>
+              <p>Calculadora Simples </p> 
+          </div>
+    <div> Informe o primeiro valor:
+        <input type="text" id="valor1" name="valor1">
+    </div>
+    <div> Informe o segundo valor:
+        <input type="text" id="valor2" name="valor2">
+    </div>
+    <div> 
+        Qual operação deseja?
+        <select id="oper" name='oper'>;
+            <option value="1">Soma</option>;
+            <option value="2">Subtrair</option>;
+            <option value="3">multiplicar</option>;
+            <option value="4">dividir</option>;
+        </select>
+    </div>
+    <div>
+        <input type="submit" valor="calcular">;
+    </div>
+    </form>
+    
+    </body>
+    </html>
+------
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <?php 
+    
+    //Recebe valores 
+    $valor1=$_GET["valor1"];
+    $valor2=$_GET["valor2"];
+    $oper=$_GET["oper"];
+    $r=0;
+       //Faz as comparações
+       if ($oper==1) {
+        $r=$valor1+$valor2;
+        echo"operaçao:Soma</br>";
+    }
+    else if($oper==2){
+        $r=$valor1-$valor2;
+        echo"operaçao:Subtracao</br>";
+    }
+    else if($oper==3){
+        $r=$valor1*$valor2;
+        echo"operaçao:multiplicacao</br>";
+    }
+    else if($oper==4){
+        $r=$valor1/$valor2;
+        echo"operaçao:divisao</br>";
+    }
+    ?>
+    O Resultado é =<?php echo $r;?>
+<br>
+    <a href="calculadora.php" rel="prev">Voltar</a>
+
+
+</body>
+</html>
+
+fim da Aula

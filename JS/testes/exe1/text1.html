@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../exe1/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f1f1f1;
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            background: linear-gradient(145deg, #e0e0e0, #ffffff);
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3), -6px -6px 10px rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            text-align: center;
+            width: 320px;
+        }
+        .resultado {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #d1d1d1, #ffffff);
+            box-shadow: inset 5px 5px 8px rgba(0, 0, 0, 0.2), inset -5px -5px 8px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+
+    <title>organizando numero</title>
+</head>
+<body>
+    
+<h1>transformar numero em $$</h1>
+
+<body>
+    <h1>Conversor de Moeda</h1>
+
+    <div class="container">
+        <script>
+            var n1 = Number.parseFloat(window.prompt('Digite um número:'));
+            var val_real = n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            var val_dolar = n1.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+            var val_euro = n1.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+
+            document.write(`<p class="resultado">💰 Real: ${val_real}</p>`);
+            document.write(`<p class="resultado">💵 Dólar: ${val_dolar}</p>`);
+            document.write(`<p class="resultado">💶 Euro: ${val_euro}</p>`);
+        </script>
+    </div>
+</body>
+</html>
+
+

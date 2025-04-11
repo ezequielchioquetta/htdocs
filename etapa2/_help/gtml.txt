@@ -1,0 +1,188 @@
+By Copyright© Chioquetta Ezequiel  email: tec.ti.ezequiel@gmail.com
+Atualizações 01/01/23
+____________________________________________________________________________
+(((((((({{{{{{{----DICAS P/ESCOLA GERAL------}}}}}}}}))))))))
+https://www.mybib.com/pt/ferramentas/gerador-referencias-abnt
+criador de html
+---
+(((((((({{{{{{{----DICAS DE HTML------}}}}}}}}))))))))
+*https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element
+-
+*Biblioteca de áudio
+https://studio.youtube.com/channel/UCSOpd0JNoEyviTl7KDMwKxg/music
+-
+*fotos e vídeo sem direitos autorais
+https://www.pexels.com/pt-br/
+-
+homehost.com.br/blog/tutoriais/tags-html/
+https://tutorialehtml.com/pt/html-tutorial-criacao-formularios/
+-
+pergunta
+https://www.youtube.com/watch?v=E01LDVj0Rpg
+
+(((((((({{{{{{{----Programas------}}}}}}}}))))))))
+*[ HandBrake] programa p/ "redução d tamanho" vídeo e trocar "exteção"  -- https://www.youtube.com/watch?v=DjOSM72cYac&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=34
+ 
+----------------------------------------------------------------------------
+aula ultima aula
+https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=36 / 11.3/ vídeo36 mod 1/
+https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/11%20-%20Imagens%20din%C3%A2micas%2C%20%C3%A1udios%20e%20v%C3%ADdeos.pdf
+
+Chat na rede
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+
+Idea para fazer um site do modulo 01
+Um HTML simples
+Parágrafos, quebras e emojis
+Inserindo imagens simples
+Utilizando favicons
+Hierarquia de títulos
+Formatações de textos em HTML5
+Formatações de códigos, citações e abreviações.
+Listas em HTML5
+Links internos, externos e de downloads
+Imagens dinâmicas e áudio
+Vídeos em HTML5
+Usando estilos in-line
+Usando estilos internos
+Usando estilos externos
+---------------------------------------------------------------------------------------------------------------
+Sites de apoio 
+
+https://acervolima.com/quais-sao-as-tags-html-que-foram-descontinuadas-no-html5/
+-------------------------------------------------------------------------------------------------------------
+Comando
+*comando para alterar as tag´s segura "alt" e seleciona
+*Comando Para colocare a coluna inteira para direita ou esquerda 
+"Seleciona +shit+tab ou seleciona +tab"
+*Para mudar ou apagar uma letra ao mesmo tempo basta segurar o "alt" e clicar aonde vc deseja alterar. 
+-------------------------------------------------------------------------------------------------------------
+Comdando fonte
+<strong> negrito c/ sentido;
+--
+<em>italico;
+--
+<mark> marcar;
+--
+<u>sublinhado;
+--
+<big>Aumento;
+--
+<del>texto excluído ;
+--
+<ins>sublinhado c/ sentido;
+--
+<sup>x²  diminui a letra e levanta;
+--
+<sub>H2O diminui a letra e baixa;
+--
+<small>pequenas;
+--
+<code>comando para arrumaras letras;
+--
+<pre>arruma a formatação de texto;
+--
+<q> " " c/ sentido;
+--
+<bloquete> vai aparecer deslocado
+--
+<bloquete cite="">vai aparecer deslocado informações ocultas, vistas apenas pelo google; EX:
+--
+<p>O elemento HTML <p> representa um parágrafo. Em mídias visuais, parágrafos são representados como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco.
+--
+<abbr>O elemento HTML <p> representa um parágrafo. Em mídias visuais, parágrafos são representados como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco.EX:
+--
+<bdo>(bidirectional override) é usado para substituir a direcionalidade atual do texto. EX:
+--
+{<ol>representa uma lista de itens ordenados.
+--
+<ul>representa uma lista de itens sem ordem rígida,
+--
+<li>é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada ( <ol> ), uma lista desordenada ( <ul> )EX:}
+--
+{<type>Se o valor do atributo type for file , este atributo indica quais tipos de arquivo o servidor aceita; caso contrário, este atributo é ignorado
+--
+<start>O atributo start possibilita que a lista comece em qualquer valor e não apenas a partir da primeira unidade de sua numeração. Modifica o estilo da numeração.EX:}
+--
+{{{{{{{{{<a>com o atributo href cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada <a> precisará indicar o destino do link.
+<img> O elemento **HTML <img> **(or HTML Image Element) representa a inserção de imagem no documento,}}}}}}
+--
+<link>O Elemento HTML <link> especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas EX:
+--
+<target>Carrega a página por toda a extensão da janela do navegador, ignorando a estrutura dos frames. Quando o visitante clicar sobre este link, a página links.EX:
+--
+<href>com o atributo href cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada <a> precisará indicar o destino do link.EX:
+--
+<favicom>Mistura de favorite + icon, ou “ícone favorito”, favicon é aquela representação visual pequenininha, que fica à esquerda do nome do seu site na aba do navegador em que ele está sendo acessado.EX:
+--
+{<dl> elemento HTML Definition List ( <dl> ) engloba uma lista de pares de termos e descrições. 
+<dt><dd>A tag <dt> é usada para especificar a lista de descrição. A tag <dd> representa a descrição da definição e é usada para denotar a descrição ou definição de um item em uma lista de descrição. A tag <dl> é usada para representar a lista de descrição.EX:}
+--
+{<picture> O elemento HTML <picture> é um container usado para especificar múltiplos elementos <source> para um elemento específico <img> contido nele. O navegador irá escolher a imagem mais adequada de acordo com o layout atual da página, caracteristicas do dispositivo em que será exibido (p.e. um dispositivo normal ou um hiDPI), e a habilidade do navegador de renderizar um certo tipo de imagem (p.e., envie uma imagem WebP para os navegadores baseados no Chromium ou PNG para navegadores ); se não houver correspondência entre os elementos <source>, o arquivo especificado pelo elemento <img> será selecionado. A imagem selecionada é então exibida no espaço ocupado pelo elemento <img>.
++<img>com o atributo src. Ou seja: o atributo src, ou source, vai conter a url da imagem que será inserida.
++<source>  é utilizado para especificar múltiplos recursos de mídia de elementos <picture> , <audio> ou <video> em HTML5. É um elemento vazio. É normalmente usado para disponibilizar multiple formats supported by different browsers. EX:
+
+{{{{{{{<h1>Imagem dinâmica</h1>}}}}}}}}}   
+<picture>
+        <source media="(max-width: 750px)" srcset="imagens/p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/m.png" type="image/png">
+        <img src="imagens/g.png" alt="imagem flexível"></picture>}
+--
+{{{{{{{{{<p>Vamos aprender a reproduzir áudio em htm5.</p>}}}}}}}}
+<audio preload="metadata" controls> 
+    <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+    <source src="midia/guanacast-33.ogg" type="audio/mpeg">
+    <source src="midia/guanacast-33.wav" type="audio/mpeg">
+    <p> Seu navegador não suporta áudio <a href="midia/happy-mistake.mp3" type="audio/mpeg"></a></p>
+</audio>
+--
+{{{{{{{{<p>Vamos aprender a reproduzir vídeo em htm5.</p>}}}}}}}}
+<video width="160" height="100"  poster="imagens/limoes-capa.png" controls autoplay loop>
+    <source src="midia/meu-video.mp4" type="video/mp4">
+    <source src="midia/meu-video.m4v" type="video/mp4">
+    <source src="midia/meu-video.webm" type="video/webm">
+    <source src="midia/meu-video.ogv" type="video/ogg">
+    <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+</video>
+
+<h1>Inserindo vídeos do YouTube</h1>
+<iframe width="160" height="100" src="https://www.youtube.com/embed/eF9Qoc6p_4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h1>Inserindo vídeos do Vimeo</h1>
+<iframe src="https://player.vimeo.com/video/197093965?color=ff9933&portrait=0" width="160" height="100" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+_________________________________________________________________________________________________________________
+
+Comando Css
+{text-align:right; alinhar direita
+{text-align:justify
+< marcar style="backgrond-color:white;" 
+-------------------------------------------------------------------------------------------------------------
+*Css -      hr {
+            position: relative;
+            top: 20px;
+            border: none;
+            height: 12px;
+            background: black;
+            margin-bottom: 50px;
+
+-----------------------------------------------------------------------------------------------------------------
+
+ {{{{{{   <title>Estilos Inline</title>   
+</head>
+<body style="background-color: lightskyblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+    <h1 style="color: mediumblue; background-color: dodgerblue; font-size: 1.5em;">Capítulo 1</h1>
+    <h2 style="color: darkred; font-size: 1.2em;">Capítulo 1.1</h2>
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit assumenda itaque vitae optio modi quaerat aperiam perspiciatis dignissimos sit repudiandae asperiores ipsam officiis aliquid explicabo quis fuga nesciunt, esse possimus.</p> }}}}}}}
+
+----------------------------------------------------------------------------
